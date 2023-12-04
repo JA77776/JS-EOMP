@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 40px;
+}
+
+#foot {
+    margin-top: 100%;
+    box-sizing: border-box;
+    container: 'fluid';
+}
+
+.navbar {
+    padding: bottom 10px;;
+}
+
+/* main */
+
+#M {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
