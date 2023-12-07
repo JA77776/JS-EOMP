@@ -6,26 +6,120 @@
     box-sizing: border-box;
 }
 
-.logo {
-    width: 40px;
-}
-
-#foot {
-    margin-top: 100%;
-    box-sizing: border-box;
-    container: 'fluid';
-}
-
-.navbar {
-    padding: bottom 10px;;
+/* body styling */
+/* background image */
+body {
+    background-color: #f8f9fa;
+    overflow: scroll;
+    background-image: url(https://i.postimg.cc/28zPgbQm/amazing-picture-of-nike-jordan-1-60aettd8laxbjtia.jpg);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: rgba(255, 255, 255, 0.5);
+    color: #343a40;
 }
 
 /* main */
 
-#M {
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-items: center;
+.MARGIN {
+    margin-top: 50vh;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 40vh;
+    text-align: center;
 }
+
+/* display */
+#display {
+    
+}
+
+/* glass/animation */
+.glass{
+    transition: 2s;
+    background: white;
+    background: linear-gradient(to right bottom,
+            rgba(221, 170, 170, 0.078),
+            rgba(255, 255, 255, 0.029));
+    backdrop-filter: blur(1rem);
+    width: 20%;
+    height: 20%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    box-shadow: 0 0 1rem rgb(0, 0, 0, 0.2);
+} 
+/* .glass:hover{
+    transition: 3s;
+    color: aqua;
+    background-color: #000000;
+    backdrop-filter: blur(1rem);
+} */
+/* .glass h1{ */
+    /* font-size: 10rem;
+    color: white;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.087); */
+/* } */
+
+
+.logo {
+    width: 40px;
+}
+
+/* footer styling */
+#f {
+    margin-top: 10vh;
+    background-color: #343a40;
+}
+
+/* search and sort btn */
+
+#between {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-top: 2rem;
+    position: relative;
+}
+
+#bottom {
+    margin-bottom: 2rem;
+}
+
+
+
+/* about */
+#about {
+       
+    color: rgb(0, 242, 255);
+}
+
+
+/* Cards Product page styling*/
+
+#cards {
+    margin-top: 5rem;
+}
+
+/* Search and sort section styling */
+#display {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    
+
+
+
+
+}
+
+
+
+
