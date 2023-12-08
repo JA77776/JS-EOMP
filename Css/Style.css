@@ -9,7 +9,6 @@
 /* body styling */
 /* background image */
 body {
-    background-color: #f8f9fa;
     overflow: scroll;
     background-image: url(https://i.postimg.cc/28zPgbQm/amazing-picture-of-nike-jordan-1-60aettd8laxbjtia.jpg);
     background-position: center;
@@ -28,45 +27,7 @@ body {
     text-align: center;
 }
 
-/* display */
-#display {
-    
-}
-
-/* glass/animation */
-.glass{
-    transition: 2s;
-    background: white;
-    background: linear-gradient(to right bottom,
-            rgba(221, 170, 170, 0.078),
-            rgba(255, 255, 255, 0.029));
-    backdrop-filter: blur(1rem);
-    width: 20%;
-    height: 20%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5rem;
-    box-shadow: 0 0 1rem rgb(0, 0, 0, 0.2);
-} 
-/* .glass:hover{
-    transition: 3s;
-    color: aqua;
-    background-color: #000000;
-    backdrop-filter: blur(1rem);
-} */
-/* .glass h1{ */
-    /* font-size: 10rem;
-    color: white;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.087); */
-/* } */
-
+ /* logo */
 
 .logo {
     width: 40px;
@@ -95,31 +56,94 @@ body {
 
 
 /* about */
+
 #about {
-       
-    color: rgb(0, 242, 255);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 60px;
+    font-family:Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    background-color: rgba(53, 30, 1, 0.945);  
+    color: rgb(139, 139, 139);
+    margin-bottom: 5rem;
 }
 
 
 /* Cards Product page styling*/
 
 #cards {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 /* Search and sort section styling */
+
 #display {
-    justify-content: center;
-    align-items: center;
     display: flex;
-
-    
-
-
-
-
+    align-items: center;
+    justify-content: center;
 }
 
 
+/* contact page styling*/
+
+.wrapper { 
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 370px; 
+    width: 100%; 
+    background: #f7c4c4; 
+    padding: 20px; 
+    border-radius: 40px; 
+    box-shadow: 5px 5px 4px
+        rgb(255, 255, 255); 
+} 
+  
+.wrapper h2 { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: #332902; 
+} 
+  
+.wrapper .input_field { 
+    margin-bottom: 10px; 
+} 
+  
+.wrapper .input_field input[type="text"],.wrapper textarea { 
+    border: 5px solid #5f5e5e; 
+    width: 100%; 
+    padding: 10px; 
+} 
+  
+.wrapper textarea { 
+    resize: none; 
+    height: 100px; 
+} 
+  
+.wrapper .btn input[type="submit"] { 
+    border: 0px; 
+    margin-top: 15px; 
+    padding: 10px; 
+    text-align: center; 
+    width: 100%; 
+    background: #b2fcaa; 
+    color: #000000; 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    font-weight: bold; 
+    border-radius: 30px; 
+    cursor: pointer; 
+} 
+  
+/* text decoration */
+
+#textdec {
+    color: #e0e0e0;
+}
 
 
