@@ -59,7 +59,72 @@
     <!-- Main content -->
 
     <main class="container-fluid MARGIN">
-        <div class="container"></div>
+        <div class="container mt-4">
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control mb-2" id="searchInput" placeholder="Search Product">
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary mb-2 float-end" id="sortButton">Sort Products</button>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          </table>
+          <tbody id="productTableContaniner"></tbody>
+
+          <button class="btn btn-success" id="addProduct">Add Product🫴</button>
+
+          <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addProductForm">
+                            <div class="form-group">
+                              <label for="productBrand">Product Brand</label>
+                              <input type="text" class="form-control" id="productBrand" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productName">Product Name</label>
+                                <input type="text" class="form-control" id="productName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productPrice">Product Price</label>
+                                <input type="number" class="form-control" id="productPrice" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+          <div id="textdec" class="col-md-6">
+              <h3>Total Amount: R<span id="totalAmount">0.00</span></h3>
+          </div>
+          <div class="col-md-6">
+              <button class="btn btn-success float-right" id="payButton">Pay</button>
+          </div>
+      </div>
+
+
+
+        </div>
 
 
 

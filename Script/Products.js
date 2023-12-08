@@ -15,7 +15,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
     localStorage.setItem('products', JSON.stringify(
         [{
                 id: 0,
-                brand: 'Jorden',
+                brand: 'Jordan',
                 name: 'Air Jorden 4',
                 img: 'https://i.postimg.cc/vHbB7rY1/air-jordan-4-white-metallic-red-CT8527-112-official-images-4.webp',
                 price: 5000,
@@ -23,7 +23,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 1,
-                brand: 'Jorden',
+                brand: 'Jordan',
                 name: 'Air Jorden 4',
                 img: 'https://i.postimg.cc/HxbYXxF4/2989-grande.webp',
                 price: 5000,
@@ -32,7 +32,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 2,
-                brand: 'Jorden',
+                brand: 'Jordan',
                 name: 'Air Jorden 3',
                 img: 'https://i.postimg.cc/W4BpdrY1/air-jordan-5-retro-gs-blue-sue-1698291902-858ded41.png',
                 price: 4000,
@@ -41,7 +41,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 3,
-                brand: 'Jorden',
+                brand: 'Jordan',
                 name: 'Jorden 3',
                 img: 'https://i.postimg.cc/Wb845dz5/D6812400.webp',
                 price: 3000,
@@ -50,7 +50,7 @@ let products = JSON.parse(localStorage.getItem('products')) ?
             },
             {
                 id: 4,
-                brand: 'Jorden',
+                brand: 'Jordan',
                 name: 'Jorden 5',
                 img: 'https://i.postimg.cc/prqtJnC8/FD1643-300-sivasdescalzo-Jordan-WMNS-AIR-JORDAN-6-RETRO-GTX-1700576272-1.webp',
                 price: 3000,
@@ -83,12 +83,6 @@ function to_DisplayBrand_Products() {
     `
 }
     document.getElementById('#Checkout')
-
-    // let checkoutPage = JSON.parse( localStorage.setItem('checkout')) ?
-    // JSON.parse( localStorage.getItem('checkout')) :
-    // localStorage.getItem( 'checkout', JSON.stringify(
-    //     to_DisplayBrand_Products()
-    // ))
 }
 to_DisplayBrand_Products()
 
@@ -103,22 +97,22 @@ brandSearch.addEventListener('keyup', () => {
         });
         if (searchResults.length > 0) {
             results.innerHTML = ""
-            searchResults.forEach((item, i) => {
+            searchResults.forEach((product, i) => {
                 results.innerHTML +=
                     `<div class="card mx-3 my-3" style="width: 10rem; height: 25rem ">
-            <img src="${item.img}" class="card-img-top img-fluid" style="width:12rem; height:10rem" alt="${item.name}">
+            <img src="${product.img}" class="card-img-top img-fluid" style="width:12rem; height:10rem" alt="${item.name}">
             <div class="card-body">
-              <h5 class="card-title">${item.brand}</h5>
-              <p class="card-text">${item.price}</p>
-              <p class="card-text">${item.name}</p>
-              <a class="btn btn-primary" id="addToCart">Add to cart</a>
+              <h5 class="card-title">${product.brand}</h5>
+              <p class="card-text">${product.price}</p>
+              <p class="card-text">${product.name}</p>
+              <a class="btn btn-primary" id="addToCart" oncklick="AddToCheckout(${JSON.stringify(checkoutPage)})">Add to cart</a>
             </div>
           </div>`
             })
 
             // to_DisplayBrand_Products(result);
         } else {
-            results.innerHTML = 'Item is not found.';
+            results.innerHTML = '!!Product is not found!!🤷‍♂️';
         }
     } catch (e) {
         results.innerHTML = 'Search by the name.';
@@ -138,11 +132,10 @@ function sortBrandName() {
 }
 
 
-//spinner
 
 
 
-let checkoutPage = []
+
 localStorage.setItem(('checkout'), JSON.stringify(checkoutPage))
 
 let adds = [...document.querySelectorAll("#addToCart")]
@@ -160,6 +153,12 @@ adds.forEach((e, i) => {
                 alert("Added to cart")
             }
 
-        localStorage.setItem("cart", JSON.stringify(checkoutPage))
+        localStorage.setItem("checkout", JSON.stringify(checkoutPage))
     })
 })
+function addToCheck(checkoutPage) {
+    checkoutList.push(checkoutPage);
+    localStorage.setItem('checkout', JSON.stringify(checkoutPage))
+    console.log(checkoutPage);
+    alert("Item added to cart")
+  }

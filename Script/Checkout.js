@@ -6,21 +6,38 @@ new Date().getUTCFullYear()
 
 // checkout
 
-let checkout = JSON.parse(localStorage.getItem('cart'))
+let checkoutPage = JSON.parse(localStorage.getItem('checkout'))
 console.log(checkout)
 
 
-let displaydProducts = document.querySelector('display-products')
+let displaydProducts = document.querySelector('#display-products')
 
-function toDisplayMyProducts() {
-    displaydProducts.innerHTML = '';
-    disp.foreach( item => {
-        results.innerHTML +=
-        `<tr>
-        <th scope="col"></th>
-        <td>${item.name}</td>
-        <td><input id="input" placeholder="number" type="number" ></td>
-        <td>${item.price}</td>
-      </tr>`
-    } )
+function to_DisplayCheckout_Products() {
+  displaydProducts.innerHTML = '';
+  if(checkout){
+  checkout.forEach(product => {
+      displaydProducts.innerHTML +=
+          `<tr>
+          <th scope="col">Brand</th>
+          <td>Price${product.brand}</td>
+          <td>Name${product.price}</td>
+          <td>Quantity${product.name}</td>
+        </tr>`;
+  });
+}else{
+  displaydProducts.innerHTML = `
+  <div class="spinner-border" role="status">
+<span class="visually-hidden">Loading...</span>
+</div>
+  `
 }
+  document.getElementById('#Checkout')
+}
+to_DisplayCheckout_Products()
+
+
+
+
+
+
+
